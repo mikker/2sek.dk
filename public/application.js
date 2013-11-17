@@ -6,6 +6,7 @@
 
     var inputElm = $("#word_q");
     var resultsElm = $("#results");
+    var req;
 
     $("#word_search_form").on('submit', function(event) {
       event.preventDefault();
@@ -15,11 +16,13 @@
       var input = $(this);
       var key = event.which || event.keyCode;
       window.location.hash = '' + input.val();
-      if (input.val().length > 0 && [16,17,18,91,27].indexOf(key) == -1) {
-        $.ajax({
+      if ([16,17,18,91,27].indexOf(key) == -1) {
+        if (typeof req !== 'undefined') { req.abort(); }
+        req = $.ajax({
           url: '/lookup.json',
-          data: { q: input.val() },
-          success: parseResultTo(resultsElm)
+          data: { q: input.val() }
+        }).done(parseResultTo(resultsElm)).always(function() {
+          delete req;
         });
       }
     }).focus();

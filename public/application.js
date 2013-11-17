@@ -29,6 +29,7 @@
       if (key == 27) {
         inputElm.val("").focus();
         resultsElm.html("");
+        window.location.hash = "";
       }
     });
 

@@ -5,11 +5,14 @@ class Ordbook < Sinatra::Base
 
   set :environment, ENVIRONMENT
 
-  configure :production, :development do
+  configure do
     enable :logging
-    file = File.new("./log/#{settings.environment}.log", 'a+')
-    file.sync = true
-    use Rack::CommonLogger, file
+    use Rack::CommonLogger, LOG
+  end
+
+  before do
+    Database.logger = request.logger
+    expires 500, :public, :must_revalidate
   end
 
   get '/' do

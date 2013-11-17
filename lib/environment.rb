@@ -1,8 +1,13 @@
 ENVIRONMENT = ENV['RACK_ENV'] || :development
+
+require 'logger'
+class ::Logger; alias_method :write, :<<; end
+LOG = Logger.new("log/#{ENVIRONMENT}.log")
+
 require 'bundler/setup'
 Bundler.require(:default, ENVIRONMENT)
 
-Database = Sequel.connect("sqlite://db/#{ENVIRONMENT}.sqlite")
+Database = Sequel.connect "sqlite://db/#{ENVIRONMENT}.sqlite"
 
 Database.create_table? :words do
   primary_key :id

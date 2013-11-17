@@ -2,10 +2,9 @@ ENVIRONMENT = ENV['RACK_ENV'] || :development
 require 'bundler/setup'
 Bundler.require(:default, ENVIRONMENT)
 
-`rm db/development.sqlite`
 Database = Sequel.connect("sqlite://db/#{ENVIRONMENT}.sqlite")
 
-Database.create_table :words do
+Database.create_table? :words do
   primary_key :id
   String :word, index: true, null: false
   Text :definition, null: false
@@ -13,5 +12,8 @@ Database.create_table :words do
 end
 
 class Word < Sequel::Model
+  def to_json(opts = {})
+    to_hash.to_json
+  end
 end
 

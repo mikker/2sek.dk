@@ -1,8 +1,6 @@
 #!/usr/bin/env ruby
 require 'yaml'
 
-require File.expand_path("./lib/environment")
-
 Encoding.default_external = 'iso-8859-1'
 
 def parse_file path, &block
@@ -17,6 +15,9 @@ def parse_file path, &block
     end
   end
 end
+
+`rm db/development.sqlite`
+require File.expand_path("./lib/environment")
 
 parse_file "assets/dansk-engelsk.html" do |word, definition, i|
   Word.create word: word, definition: definition, lang: 'da'

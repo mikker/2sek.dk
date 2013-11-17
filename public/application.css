@@ -1,0 +1,58 @@
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+body {
+  background: #f1f1f1;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+#word_q {
+  width: 100%;
+  outline: none;
+  border: none;
+  font-size: 40px;
+  padding: 10px;
+  position: fixed;
+}
+
+#word_search_form button {
+  display: none;
+}
+
+#results {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+  color: #222;
+  -webkit-overflow-scrolling: touch;
+}
+
+#results ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#results li {
+  padding: 10px;
+}
+
+#results li:nth-child(odd) {
+  background: #ddd;
+}
+
+#results h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+#results p {
+  margin: 0;
+}

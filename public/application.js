@@ -32,9 +32,6 @@
     });
 
     resultsElm.css({top: '' + $("#word_q").outerHeight() + 'px'});
-
-    inputElm.val('test').trigger('keyup');
-
   });
 
   function parseResultTo(resultsElm) {

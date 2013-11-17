@@ -3,6 +3,15 @@ require 'json'
 
 class Ordbook < Sinatra::Base
 
+  set :environment, ENVIRONMENT
+
+  configure :production, :development do
+    enable :logging
+    file = File.new("./log/#{settings.environment}.log", 'a+')
+    file.sync = true
+    use Rack::CommonLogger, file
+  end
+
   get '/' do
     erb :index
   end

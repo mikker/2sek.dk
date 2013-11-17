@@ -42,6 +42,7 @@ body {
 }
 
 #results li {
+  position: relative;
   padding: 10px;
 }
 
@@ -53,6 +54,21 @@ body {
   font-size: 18px;
   margin: 0;
 }
+
+#results h2:after {
+  background: #999;
+  color: #fff;
+  border-radius: 3px;
+  display: block;
+  padding: 2px 5px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 12px;
+}
+
+#results li.en h2:after { content: 'en'; }
+#results li.da h2:after { content: 'da'; }
 
 #results p {
   margin: 0;

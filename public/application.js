@@ -14,6 +14,7 @@
     inputElm.on('keyup', function(event) {
       var input = $(this);
       var key = event.which || event.keyCode;
+      window.location.hash = '' + input.val();
       if (input.val().length > 0 && [16,17,18,91,27].indexOf(key) == -1) {
         $.ajax({
           url: '/lookup.json',
@@ -30,6 +31,10 @@
         resultsElm.html("");
       }
     });
+
+    if (window.location.hash.length > 1) {
+      inputElm.val(window.location.hash.substr(1)).trigger('keyup').select();
+    }
 
     resultsElm.css({top: '' + $("#word_q").outerHeight() + 'px'});
   });

@@ -2,3 +2,4 @@ log
 tmp
 .bundle
 vendor/bundle
+db/*.sqlite

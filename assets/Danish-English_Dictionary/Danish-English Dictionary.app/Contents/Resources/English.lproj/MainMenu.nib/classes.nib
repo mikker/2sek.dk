@@ -1,0 +1,51 @@
+{
+    IBClasses = (
+        {CLASS = DanishEnglishDictionary; LANGUAGE = ObjC; SUPERCLASS = Dictionary; }, 
+        {CLASS = Dictionary; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {print = id; }; 
+            CLASS = DictionaryApplicationDelegate; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                dkEnEntriesView = NSTextView; 
+                enDkEntriesView = NSTextView; 
+                myTabViewDelegate = TabViewDelegate; 
+                tabView = NSTabView; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {lookUpDanishWord = id; lookUpEnglishWord = id; }; 
+            CLASS = DictionaryController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                dkEnDictionary = Dictionary; 
+                dkEnEntriesView = NSTextView; 
+                dkEnLookUpButton = NSButton; 
+                dkEnWordField = NSTextField; 
+                enDkDictionary = Dictionary; 
+                enDkEntriesView = NSTextView; 
+                enDkLookUpButton = NSButton; 
+                enDkWordField = NSTextField; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = EnglishDanishDictionary; LANGUAGE = ObjC; SUPERCLASS = Dictionary; }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {print = id; }; 
+            CLASS = TabViewDelegate; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                dkEnLookUp = NSButton; 
+                dkEnWordField = NSTextField; 
+                enDkLookUp = NSButton; 
+                enDkWordField = NSTextField; 
+                myDictionaryController = DictionaryController; 
+                myTabView = NSTabView; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

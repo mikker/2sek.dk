@@ -1,5 +1,5 @@
 #!/bin/sh -x
-DIR="w/apps/2sek.dk/current"
+DIR="/var/www/apps/2sek.dk"
 UPDATE="git pull"
 BUNDLE="zsh --login -c 'bundle --deployment'"
 RESTART="touch tmp/restart.txt"

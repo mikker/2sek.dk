@@ -7,7 +7,7 @@ LOG = Logger.new("log/#{ENVIRONMENT}.log")
 require 'bundler/setup'
 Bundler.require(:default, ENVIRONMENT)
 
-Database = Sequel.connect "sqlite://db/#{ENVIRONMENT}.sqlite"
+Database = Sequel.connect ENV['DATABASE_URL'] || "sqlite://db/#{ENVIRONMENT}.sqlite"
 
 Database.create_table? :words do
   primary_key :id

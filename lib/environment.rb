@@ -1,3 +1,4 @@
+# encoding: utf-8
 ENVIRONMENT = ENV['RACK_ENV'] || :development
 
 require 'logger'

@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# encoding: utf-8
 require 'yaml'
 
 Encoding.default_external = 'iso-8859-1'

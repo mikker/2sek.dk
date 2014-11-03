@@ -16,9 +16,6 @@ def parse_file path, &block
   end
 end
 
-db_path = "./db/#{ENVIRONMENT.to_s.downcase}.sqlite"
-`rm #{db_path}` if File.exists?(db_path)
-
 require File.expand_path("./lib/environment")
 
 parse_file "assets/dansk-engelsk.html" do |word, definition, i|

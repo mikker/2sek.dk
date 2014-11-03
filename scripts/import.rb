@@ -18,6 +18,8 @@ end
 
 require File.expand_path("./lib/environment")
 
+puts "Writing to database url: #{ENV["DATABASE_URL"]}"
+
 parse_file "assets/dansk-engelsk.html" do |word, definition, i|
   Word.create word: word, definition: definition, lang: 'da'
 end

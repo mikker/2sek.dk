@@ -3,3 +3,4 @@ tmp
 .bundle
 vendor/bundle
 db/*.sqlite
+.env

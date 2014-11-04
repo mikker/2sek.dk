@@ -9,3 +9,6 @@ gem 'sinatra'
 gem 'iconv'
 gem 'dotenv', :groups => [:development, :test]
 
+group :development do
+  gem 'puma'
+end

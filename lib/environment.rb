@@ -7,7 +7,7 @@ LOG = Logger.new("log/#{ENVIRONMENT}.log")
 
 require 'bundler/setup'
 Bundler.require(:default, ENVIRONMENT)
-Dotenv.load
+Dotenv.load if defined?(Dotenv)
 
 Database = Sequel.connect ENV['DATABASE_URL']
 

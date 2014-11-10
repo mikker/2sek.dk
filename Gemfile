@@ -8,7 +8,6 @@ gem 'sequel'
 gem 'sinatra'
 gem 'iconv'
 gem 'dotenv', :groups => [:development, :test]
+gem 'puma'
+gem 'foreman'
 
-group :development do
-  gem 'puma'
-end

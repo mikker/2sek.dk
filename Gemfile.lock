@@ -3,22 +3,22 @@ GEM
   specs:
     coderay (1.1.0)
     dotenv (1.0.2)
-    foreman (0.63.0)
-      dotenv (>= 0.7)
-      thor (>= 0.13.6)
+    foreman (0.77.0)
+      dotenv (~> 1.0.2)
+      thor (~> 0.19.1)
     iconv (1.0.4)
+    kgio (2.9.3)
     method_source (0.8.2)
-    pg (0.17.1)
+    pg (0.18.1)
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
-    puma (2.9.2)
-      rack (>= 1.1, < 2.0)
-    rack (1.5.2)
+    rack (1.6.0)
     rack-protection (1.5.3)
       rack
-    sequel (4.16.0)
+    raindrops (0.13.0)
+    sequel (4.19.0)
     sinatra (1.4.5)
       rack (~> 1.4)
       rack-protection (~> 1.4)
@@ -26,6 +26,10 @@ GEM
     slop (3.6.0)
     thor (0.19.1)
     tilt (1.4.1)
+    unicorn (4.8.3)
+      kgio (~> 2.6)
+      rack
+      raindrops (~> 0.7)
 
 PLATFORMS
   ruby
@@ -36,6 +40,6 @@ DEPENDENCIES
   iconv
   pg
   pry
-  puma
   sequel
   sinatra
+  unicorn

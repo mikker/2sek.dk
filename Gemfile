@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.1.4'
+ruby '2.2.0'
 
 gem 'pry'
 gem 'pg'
@@ -8,6 +8,6 @@ gem 'sequel'
 gem 'sinatra'
 gem 'iconv'
 gem 'dotenv', :groups => [:development, :test]
-gem 'puma'
+gem 'unicorn'
 gem 'foreman'
 

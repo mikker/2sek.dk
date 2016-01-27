@@ -8,6 +8,7 @@ Opbeat.start!(Opbeat::Configuration.new do |c|
   c.secret_token = ENV.fetch('OPBEAT_SECRET_TOKEN')
 
   c.debug_traces = ENVIRONMENT == :development
+  c.transaction_post_interval = 10
   c.logger = LOG
 end)
 

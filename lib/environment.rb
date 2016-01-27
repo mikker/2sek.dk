@@ -1,9 +1,9 @@
 # encoding: utf-8
-ENVIRONMENT = ENV['RACK_ENV'] || :development
+ENVIRONMENT = (ENV['RACK_ENV'] || :development).to_sym
 
 require 'logger'
 class ::Logger; alias_method :write, :<<; end
-LOG = Logger.new("log/#{ENVIRONMENT}.log")
+LOG = Logger.new(STDOUT)
 
 require 'bundler/setup'
 Bundler.require(:default, ENVIRONMENT)

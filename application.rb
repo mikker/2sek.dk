@@ -1,7 +1,18 @@
 require "./lib/environment"
 require 'json'
+require 'tilt/erb'
+
+Opbeat.start!(Opbeat::Configuration.new do |c|
+  c.organization_id = ENV.fetch('OPBEAT_ORGANIZATION_ID')
+  c.app_id = ENV.fetch('OPBEAT_APP_ID')
+  c.secret_token = ENV.fetch('OPBEAT_SECRET_TOKEN')
+
+  c.debug_traces = ENVIRONMENT == :development
+  c.logger = LOG
+end)
 
 class Ordbook < Sinatra::Base
+  use Opbeat::Middleware
 
   set :environment, ENVIRONMENT
 

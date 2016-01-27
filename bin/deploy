@@ -1,0 +1,4 @@
+#!/bin/sh -x
+set -e
+
+git push dokku master

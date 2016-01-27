@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/opbeat/opbeat-ruby
-  revision: bd67a83e52824245bd843bc8f0c6fea6f76acffc
+  revision: d1b010ca33b404f468119a76b1341ce26ff71aa5
   specs:
     opbeat (3.0.0)
       activesupport (>= 3.0.0)

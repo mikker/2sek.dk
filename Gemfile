@@ -1,18 +1,12 @@
 source 'https://rubygems.org'
 
-ruby '2.3.1'
+ruby '2.3.3'
 
-gem 'pg', group: :production
-gem 'sqlite3', group: [:development, :test]
-
+gem 'sqlite3'
 gem 'sequel'
 
 gem 'sinatra'
 gem 'iconv'
 gem 'dotenv', :groups => [:development, :test]
 
-gem 'unicorn'
-gem 'foreman'
-
-gem 'opbeat',
-  git: 'https://github.com/opbeat/opbeat-ruby'
+gem 'puma'

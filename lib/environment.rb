@@ -9,7 +9,7 @@ require 'bundler/setup'
 Bundler.require(:default, ENVIRONMENT)
 Dotenv.load if defined?(Dotenv)
 
-Database = Sequel.connect ENV['DATABASE_URL'].to_s.gsub(/postgresql/,'postgres')
+Database = Sequel.connect "sqlite://db/data.sqlite"
 
 Database.create_table? :words do
   primary_key :id

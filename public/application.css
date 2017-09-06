@@ -1,14 +1,11 @@
-*,
-:before,
-:after {
+*, *:before, *:after {
   box-sizing: border-box;
 }
 
 body {
   background: #f1f1f1;
-  overflow: hidden;
-  -webkit-font-smoothing: antialiased;
-  font-family: "Georgia", "Times New Roman", "Times", serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  line-height: 1.25;
 }
 
 #word_q {
@@ -67,8 +64,12 @@ body {
   font-size: 12px;
 }
 
-#results li.en h2:after { content: 'en'; }
-#results li.da h2:after { content: 'da'; }
+#results li.en h2:after {
+  content: 'en';
+}
+#results li.da h2:after {
+  content: 'da';
+}
 
 #results p {
   margin: 0;

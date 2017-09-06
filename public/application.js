@@ -22,7 +22,7 @@
           url: '/lookup.json',
           data: { q: input.val() }
         }).done(parseResultTo(resultsElm)).always(function() {
-          delete req;
+          // req = null
         });
       }
     }).focus();

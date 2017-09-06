@@ -10,4 +10,4 @@ RUN bundle
 
 EXPOSE $PORT
 
-CMD bundle exec puma -C config/puma.rb -p $PORT
+CMD bundle exec puma -C config/puma.rb

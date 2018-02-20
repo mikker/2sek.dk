@@ -8,6 +8,6 @@ WORKDIR $APP_DIR
 
 RUN bundle
 
-EXPOSE $PORT
+EXPOSE 3000:3000
 
 CMD bundle exec puma -C config/puma.rb

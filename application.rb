@@ -3,6 +3,8 @@ require 'json'
 require 'tilt/erb'
 
 class Ordbook < Sinatra::Base
+  use ElasticAPM::Middleware
+
   set :environment, ENVIRONMENT
 
   configure do
@@ -28,3 +30,6 @@ class Ordbook < Sinatra::Base
     { words: @words }.to_json
   end
 end
+
+ElasticAPM.start app: Ordbook, logger: LOG
+at_exit { ElasticAPM.stop }

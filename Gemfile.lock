@@ -1,14 +1,21 @@
+GIT
+  remote: https://github.com/elastic/apm-agent-ruby
+  revision: 7b1a04c62339d7ee81c93ab86ee8ae67f6bca1ee
+  branch: remove-active-support
+  specs:
+    elastic-apm (0.6.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
-    dotenv (2.2.1)
+    dotenv (2.4.0)
     iconv (1.0.5)
     mustermann (1.0.2)
-    puma (3.11.2)
-    rack (2.0.4)
+    puma (3.11.4)
+    rack (2.0.5)
     rack-protection (2.0.1)
       rack
-    sequel (5.5.0)
+    sequel (5.8.0)
     sinatra (2.0.1)
       mustermann (~> 1.0)
       rack (~> 2.0)
@@ -22,6 +29,7 @@ PLATFORMS
 
 DEPENDENCIES
   dotenv
+  elastic-apm!
   iconv
   puma
   sequel
@@ -29,7 +37,7 @@ DEPENDENCIES
   sqlite3
 
 RUBY VERSION
-   ruby 2.5.0p0
+   ruby 2.5.1p57
 
 BUNDLED WITH
    1.16.1

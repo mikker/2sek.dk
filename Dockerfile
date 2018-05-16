@@ -1,4 +1,4 @@
-FROM ruby:2.5.0
+FROM ruby:latest
 
 ENV PORT 3000
 ENV APP_DIR /app/

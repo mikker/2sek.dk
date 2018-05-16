@@ -1,0 +1,7 @@
+{
+  "alias": "2sek.dk",
+  "env": {
+    "ELASTIC_APM_SERVER_URL": "@elastic-apm-server-url",
+    "ELASTIC_APM_SECRET_TOKEN": "@elastic-apm-secret-token"
+  }
+}

@@ -11,6 +11,4 @@ gem 'dotenv', :groups => [:development, :test]
 
 gem 'puma'
 
-gem 'elastic-apm',
-  git: 'https://github.com/elastic/apm-agent-ruby',
-  branch: 'remove-active-support'
+gem 'elastic-apm'

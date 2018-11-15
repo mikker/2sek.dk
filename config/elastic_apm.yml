@@ -1,4 +1,2 @@
 ---
 service_name: '2sek'
-enabled_environments: ['production', 'development']
-flush_interval: 1

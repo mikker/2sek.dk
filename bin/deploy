@@ -1,4 +1,5 @@
 #!/bin/sh -x
 set -e
 
+npm install -g now
 now && now alias

@@ -23,7 +23,7 @@ class Ordbook < Sinatra::Base
 
   get '/lookup.json' do
     @words = Word.where(
-      Sequel.like(:word, "%#{params[:q].downcase}%")
+      Sequel.like(:word, "#{params[:q].downcase}%")
     ).limit(20).order(:word).all
 
     content_type 'application/json'

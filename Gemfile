@@ -2,7 +2,9 @@ source 'https://rubygems.org'
 
 ruby '2.7.1'
 
-gem 'sqlite3'
+gem 'sqlite3', groups: [:development]
+gem 'pg', groups: [:production]
+
 gem 'sequel'
 
 gem 'sinatra'

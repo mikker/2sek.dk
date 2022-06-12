@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/estolfo/apm-agent-ruby
-  revision: 9ae14e7ac04fe215813a96bd860c5400e0932c98
+  revision: fb5d530063b747d4bae502b03f3bb852f39eb9e7
   branch: outcome
   specs:
     elastic-apm (3.11.1)
@@ -12,24 +12,22 @@ GEM
   specs:
     addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
-    concurrent-ruby (1.1.7)
+    concurrent-ruby (1.1.10)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
     dotenv (2.7.6)
-    ffi (1.13.1)
+    ffi (1.15.5)
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
       rake
-    http (4.4.1)
-      addressable (~> 2.3)
+    http (5.0.4)
+      addressable (~> 2.8)
       http-cookie (~> 1.0)
       http-form_data (~> 2.2)
-      http-parser (~> 1.2.0)
-    http-cookie (1.0.3)
+      llhttp-ffi (~> 0.4.0)
+    http-cookie (1.0.5)
       domain_name (~> 0.5)
     http-form_data (2.3.0)
-    http-parser (1.2.1)
-      ffi-compiler (>= 1.0, < 2.0)
     iconv (1.0.8)
     mustermann (2.0.2)
       ruby2_keywords (~> 0.0.1)
@@ -53,7 +51,7 @@ GEM
     tilt (2.0.11)
     unf (0.1.4)
       unf_ext
-    unf_ext (0.0.7.7)
+    unf_ext (0.0.8.2)
 
 PLATFORMS
   ruby
@@ -69,7 +67,7 @@ DEPENDENCIES
   sqlite3
 
 RUBY VERSION
-   ruby 2.7.2p137
+   ruby 3.1.2p20
 
 BUNDLED WITH
    2.1.4

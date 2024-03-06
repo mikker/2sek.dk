@@ -1,64 +1,41 @@
-GIT
-  remote: https://github.com/estolfo/apm-agent-ruby
-  revision: fb5d530063b747d4bae502b03f3bb852f39eb9e7
-  branch: outcome
-  specs:
-    elastic-apm (3.11.1)
-      concurrent-ruby (~> 1.0)
-      http (>= 3.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.8.0)
-      public_suffix (>= 2.0.2, < 5.0)
-    concurrent-ruby (1.1.10)
-    domain_name (0.5.20190701)
-      unf (>= 0.0.5, < 1.0.0)
-    dotenv (2.7.6)
-    ffi (1.15.5)
-    ffi-compiler (1.0.1)
-      ffi (>= 1.0.0)
-      rake
-    http (5.0.4)
-      addressable (~> 2.8)
-      http-cookie (~> 1.0)
-      http-form_data (~> 2.2)
-      llhttp-ffi (~> 0.4.0)
-    http-cookie (1.0.5)
-      domain_name (~> 0.5)
-    http-form_data (2.3.0)
+    base64 (0.2.0)
+    bigdecimal (3.1.6)
+    dotenv (3.1.0)
     iconv (1.0.8)
-    mustermann (2.0.2)
+    mini_portile2 (2.8.5)
+    mustermann (3.0.0)
       ruby2_keywords (~> 0.0.1)
-    nio4r (2.5.8)
-    pg (1.2.3)
-    public_suffix (4.0.6)
-    puma (5.6.4)
+    nio4r (2.7.0)
+    pg (1.5.6)
+    puma (6.4.2)
       nio4r (~> 2.0)
-    rack (2.2.6.3)
-    rack-protection (2.2.3)
-      rack
-    rake (13.0.1)
+    rack (3.0.9.1)
+    rack-protection (4.0.0)
+      base64 (>= 0.1.0)
+      rack (>= 3.0.0, < 4)
+    rack-session (2.0.0)
+      rack (>= 3.0.0)
     ruby2_keywords (0.0.5)
-    sequel (5.38.0)
-    sinatra (2.2.3)
-      mustermann (~> 2.0)
-      rack (~> 2.2)
-      rack-protection (= 2.2.3)
+    sequel (5.78.0)
+      bigdecimal
+    sinatra (4.0.0)
+      mustermann (~> 3.0)
+      rack (>= 3.0.0, < 4)
+      rack-protection (= 4.0.0)
+      rack-session (>= 2.0.0, < 3)
       tilt (~> 2.0)
-    sqlite3 (1.4.2)
-    tilt (2.0.11)
-    unf (0.1.4)
-      unf_ext
-    unf_ext (0.0.8.2)
+    sqlite3 (1.7.2)
+      mini_portile2 (~> 2.8.0)
+    tilt (2.3.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   dotenv
-  elastic-apm!
   iconv
   pg
   puma
@@ -67,7 +44,7 @@ DEPENDENCIES
   sqlite3
 
 RUBY VERSION
-   ruby 3.1.2p20
+   ruby 3.3.0p0
 
 BUNDLED WITH
-   2.1.4
+   2.5.6

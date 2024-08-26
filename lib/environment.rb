@@ -1,21 +1,26 @@
 # encoding: utf-8
-ENVIRONMENT = (ENV['RACK_ENV'] || :development).to_sym
+ENVIRONMENT = (ENV["RACK_ENV"] || :development).to_sym
 
-require 'logger'
-class ::Logger; alias_method :write, :<<; end
+require "logger"
+
+class ::Logger
+  alias_method :write, :<<
+end
+
 LOG = Logger.new(STDOUT)
 
-require 'bundler/setup'
+require "bundler/setup"
+
 Bundler.require(:default, ENVIRONMENT)
 Dotenv.load if defined?(Dotenv)
 
-Database = Sequel.connect ENV["DATABASE_URL"]
+Database = Sequel.connect(ENV["DATABASE_URL"])
 
-Database.create_table? :words do
-  primary_key :id
-  String :word, index: true, null: false
-  Text :definition, null: false
-  String :lang, length: 2, null: false
+Database.create_table?(:words) do
+  primary_key(:id)
+  String(:word, index: true, null: false)
+  Text(:definition, null: false)
+  String(:lang, length: 2, null: false)
 end
 
 class Word < Sequel::Model
@@ -23,4 +28,3 @@ class Word < Sequel::Model
     to_hash.to_json
   end
 end
-

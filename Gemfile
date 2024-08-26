@@ -1,14 +1,8 @@
 source "https://rubygems.org"
 
-ruby "3.3.0"
+ruby "3.3.4"
 
-gem "sqlite3", groups: [:development]
-gem "pg", groups: [:production]
-
+gem "sqlite3"
 gem "sequel"
-
 gem "sinatra"
-gem "iconv"
-gem "dotenv", :groups => [:development, :test]
-
 gem "puma"

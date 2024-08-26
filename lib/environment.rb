@@ -14,7 +14,19 @@ require "bundler/setup"
 Bundler.require(:default, ENVIRONMENT)
 Dotenv.load if defined?(Dotenv)
 
-Database = Sequel.connect(ENV["DATABASE_URL"])
+Database = Sequel.connect("sqlite://db/data.sqlite")
+
+Database.run(
+  <<-SQL
+PRAGMA journal_mode = WAL;
+PRAGMA synchronous = NORMAL;
+PRAGMA journal_size_limit = 67108864; -- 64 megabytes
+PRAGMA mmap_size = 134217728; -- 128 megabytes
+PRAGMA cache_size = 2000;
+PRAGMA busy_timeout = 5000;
+  SQL
+    .strip
+)
 
 Database.create_table?(:words) do
   primary_key(:id)

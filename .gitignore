@@ -3,5 +3,3 @@ tmp
 .bundle
 vendor/bundle
 .env
-
-.vercel

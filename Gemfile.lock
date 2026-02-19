@@ -1,32 +1,36 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    base64 (0.2.0)
-    bigdecimal (3.1.8)
-    mini_portile2 (2.8.7)
-    mustermann (3.0.2)
+    base64 (0.3.0)
+    bigdecimal (4.0.1)
+    logger (1.7.0)
+    mini_portile2 (2.8.9)
+    mustermann (3.0.4)
       ruby2_keywords (~> 0.0.1)
-    nio4r (2.7.3)
-    puma (6.4.2)
+    nio4r (2.7.5)
+    puma (7.2.0)
       nio4r (~> 2.0)
-    rack (3.1.7)
-    rack-protection (4.0.0)
+    rack (3.2.5)
+    rack-protection (4.2.1)
       base64 (>= 0.1.0)
+      logger (>= 1.6.0)
       rack (>= 3.0.0, < 4)
-    rack-session (2.0.0)
+    rack-session (2.1.1)
+      base64 (>= 0.1.0)
       rack (>= 3.0.0)
     ruby2_keywords (0.0.5)
-    sequel (5.83.1)
+    sequel (5.101.0)
       bigdecimal
-    sinatra (4.0.0)
+    sinatra (4.2.1)
+      logger (>= 1.6.0)
       mustermann (~> 3.0)
       rack (>= 3.0.0, < 4)
-      rack-protection (= 4.0.0)
+      rack-protection (= 4.2.1)
       rack-session (>= 2.0.0, < 3)
       tilt (~> 2.0)
-    sqlite3 (2.0.4)
+    sqlite3 (2.9.0)
       mini_portile2 (~> 2.8.0)
-    tilt (2.4.0)
+    tilt (2.7.0)
 
 PLATFORMS
   ruby
@@ -38,7 +42,7 @@ DEPENDENCIES
   sqlite3
 
 RUBY VERSION
-   ruby 3.3.4p94
+   ruby 3.4.5p51
 
 BUNDLED WITH
-   2.5.6
+   2.7.2

@@ -1,8 +1,8 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-ruby "3.3.4"
+ruby '3.4.5'
 
-gem "sqlite3"
-gem "sequel"
-gem "sinatra"
-gem "puma"
+gem 'puma'
+gem 'sequel'
+gem 'sinatra'
+gem 'sqlite3'

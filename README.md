@@ -8,7 +8,7 @@ $ bundle exec puma -C config/puma.rb
 
 ## Compatibility and security checks
 
-Use Ruby 3.4.12 and the committed lockfile:
+Use Ruby 3.4.13 and the committed lockfile:
 
 ```sh
 bundle install

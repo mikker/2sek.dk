@@ -22,7 +22,7 @@ jobs:
           persist-credentials: false
       - uses: ruby/setup-ruby@b3aaceaef7e0ee231b499e7b5f49c03fc1d32199
         with:
-          ruby-version: '3.4.12'
+          ruby-version: '3.4.13'
           bundler-cache: true
       - name: Check current dependency advisories
         run: bundle exec bundle-audit check --update --config .bundler-audit.yml
